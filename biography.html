@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src='java.js'></script>
+    <title>Novia Safitri</title>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        background-image: url(img/kahitna.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+
+    }
+
+    .blurred-background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        backdrop-filter: blur(20px);
+    }
+
+    @media (max-width: 900px) {
+        body {
+            background-image: url(img/poster\ kahitna.png);
+            backdrop-filter: blur(10px);
+        }
+    }
+
+
+
+    h2 {
+        text-align: center;
+        color: rgb(225, 30, 30);
+        padding-top: 10%;
+    }
+
+    /* Navbar container */
+    .navbar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        background-color: rgba(0, 0, 0, 0.4);
+        font-family: Arial;
+    }
+
+    .narbar1 {
+        overflow: hidden;
+        background-color: white;
+
+    }
+
+    /* Links inside the navbar */
+    .logo {
+        padding-right: 0px;
+        float: right;
+        padding-top: 0px;
+
+    }
+
+    .navbar a {
+        float: left;
+        font-size: 16px;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+
+    /* The dropdown container */
+    .dropdown {
+        float: left;
+        overflow: hidden;
+    }
+
+    /* Dropdown button */
+    .dropdown .dropbtn {
+        font-size: 16px;
+        border: none;
+        outline: none;
+        color: white;
+        padding: 14px 16px;
+        background-color: inherit;
+        font-family: inherit;
+        /* Important for vertical align on mobile phones */
+        margin: 0;
+        /* Important for vertical align on mobile phones */
+    }
+
+    @media (max-width: 900px) {
+        .navbar a {
+            font-size: 12px;
+        }
+
+        .dropdown .dropbtn {
+            font-size: 12px;
+        }
+    }
+
+    /* Add a red background color to navbar links on hover */
+    .navbar a:hover,
+    .dropdown:hover .dropbtn {
+        background-color: red;
+    }
+
+    /* Dropdown content (hidden by default) */
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+
+    /* Links inside the dropdown */
+    .dropdown-content a {
+        float: none;
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+    }
+
+    /* Add a grey background color to dropdown links on hover */
+    .dropdown-content a:hover {
+        background-color: #ddd;
+    }
+
+    /* Show the dropdown menu on hover */
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    /* Create two columns/boxes that floats next to each other */
+    nav {
+        float: left;
+        width: 30%;
+        height: 300px;
+        /* only for demonstration, should be removed */
+        background: #ccc;
+        padding: 20px;
+    }
+
+    /* Style the list inside the menu */
+    nav ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    header {
+        background-color: rgba(0, 0, 0, 0);
+        color: white;
+        padding: 5px;
+    }
+
+    /* Style the footer */
+    footer {
+        background-color: rgba(156, 156, 156, 0.516);
+        padding: 10px;
+        text-align: center;
+        position: fixed;
+        /* Menentukan posisi absolut */
+        bottom: 0;
+        /* Menempatkan footer di bagian bawah halaman */
+        width: 100%;
+    }
+
+    /*botton sosmed*/
+    .social-media-buttons img {
+        max-width: 30px;
+        max-height: 30px;
+    }
+
+    h2 {
+        text-align: center;
+        font-size: 28px;
+        color: rgb(225, 30, 30);
+        padding-top: 30px;
+        /* Sesuaikan dengan kebutuhan Anda */
+    }
+
+    h3 {
+        text-align: left;
+    }
+</style>
+</head>
+
+<body>
+    <div class="blurred-background"></div>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <div class="dropdown">
+            <button class="dropbtn">About
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="biography.html">Biographies</a>
+                <a href="Picture.html">Picture</a>
+            </div>
+        </div>
+        <a href="tour.html">Tour dates & locations</a>
+        <div class="logo">
+            <img src="img/logo.png" alt="logo" style="margin: 5px 0 0 0 ; width: 100px; height: 100x;">
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Discography
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="Lyrics.html">Lyrics</a>
+                <a href="SampleTrack.html">Sample Tracks</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="Contact.html">Contact</a>
+            <a href="store.html">Store</a>
+        </div>
+    </div>
+    <h2>Biografi Kahitna</h2>
+    <br>
+    <br>
+
+    <img src="img/kht2.jpg" alt="gambar group" height="320px" align="left" border="5" />
+
+    <article>
+
+        <p>Group yang didirikan di Bandung tanggal 24 Juni 1986, KAHITNA berasal dari bahasa Philipina yang berarti
+            "meskipun demikian". Akhirnya dipelesetkan menjadi bahasa Sunda "Ka" dan "Na" yang merupakan awalan dan
+            akhiran. Sehingga ketika disatukan artinya menjadi "yang paling hits".
+            Kahitna sendiri berasal dari kota Kembang Bandung. Berawal pada tahun 1983, Yovie membentuk band yang
+            bernama Coops Rhytem Section anggotanya sebagian besar menjadi Indonesia 6, Ruth Sahanaya dan KAHITNA
+            itu sendiri. Karena perbedaan idealisme, Yovie melepaskan diri dan membentuk KAHITNA pada tahun 1986
+            dengan vocalis Trie Utami, pada perkembangannnya berganti-ganti personil sampai formasi saat ini. Banyak
+            nama besar yang telah bergabung dengan KAHITNA, dari mulai kesuksesan seorang Yovie Widianto, Rita
+            Effendy, Ruth Sahanaya, Trie Utami, Hedi Yunus. KAHITNA, grup band yang dimotori oleh Yovie Widianto dan
+            dibentuk pada lebih dari dua dekade lalu ini masih terus berkarya menghasilkan lagu-lagu bertema cinta
+            yang menyentuh dan catchy. Dengan aransemen musik yang cantik, KAHITNA berhasil menggabungkan unsur
+            jazz, pop, fussion dan etnik yang memikat hati para Soulmate, sebutan untuk fans KAHITNA.
+        </p>
+        <h3>Album Pertama </h3>
+        <p>Album "Cerita Cinta" adalah album perdana Kahitna yang dirilis tahun 1994. Hits singlenya dengan judul
+            yang sama dengan albumnya telah membuat kata-kata "IYEEE….." menjadi kata yang iconic bagi pecinta musik
+            Indonesia. Album ini juga menghasilkan hits lain seperti "Seandainya Aku Bisa Terbang", "Bagaimana",
+            "Setelah Malam Ini" dan "My Valentine". Album ini juga menandakan titik awal Kahitna di kancah musik
+            Indonesia. </p>
+        <h3>Album Kedua </h3>
+        <p>Menyusul kesuksesan album pertama, album "Cantik" yang dirilis tahun 1997 menambah daftar prestasi yang
+            telah ditoreh Kahitna. Single pertamanya yang berjudul "Cantik" menjadi lagu wajib disetiap penampilan
+            panggung Kahitna. Hits single lainnya seperti "Tak Sebebas Merpati" , "Andai Dia tahu" dan "Merenda
+            Kasih" ciptaan Yovie Widianto menjadi hits single yang sangat disukai oleh pecinta musik Indonesia.
+            Ekplorasi musik etnik dan pop terdengar lebih nyata pada lagu "Leujengan" yang diangkat dari bahasa
+            melodi lagu Madura, lagu "Leujengan" pula yang mengangkat kahitna sukses juara dunia ke panggung Band
+            Explotion Tokyo tahun 1991. Di album ini juga ada hits popular yakni Tak Sebebas Merpati. </p>
+        <h3>Album Ketiga </h3>
+        <p>Sampai Nanti yang dirilis tahun 1998 mengukuhkan warna dari ciri khas kahitna yaitu tampilannya musik
+            etnik, dengan dasar musik pop dan selalu ada inovasi baru. Di album inilah para personil lainnya mulai
+            menciptakan lagu. Seperti "Setahun Kemarin" yang songs dan liriknya diciptakan oleh vokalis Kahitna
+            "Carlo Saba". Hits Single lainnya yaitu "Biarkanlah" dan "Dirantau". Disini terdapat pula lagu berbahasa
+            Italia dengan nuansa musik Eropa modern lewat lagu "Ti Amo".</p>
+        <h3>Album Keempat</h3>
+        <p>Album Kahitna IV "Permaisuriku" yang dirilis tahun 2000 ini menghasilkan musik yang lebih kreatif dan
+            berciri khas. Di Album ini Kahitna menawarkan suatu perbedaan baik secara musik, aransemen dan kemasan,
+            tanpa meninggalkan ciri khas kahitna yang sejak awal telah dibangun. Hits Single kahitna IV ini adalah
+            "Bila saya…", "Masihkah Ada Diriku" dan "Engga Ngerti".
+
+            Album "The Best of Kahitna" yang dirilis tahun 2002 ini adalah kumpulan dari hits single Kahitna dari
+            album Kahitna I – Cerita Cinta, Kahitna II – Cantik, Kahitna III – Sampai Nanti dan Kahitna IV –
+            Permaisuriku, yang telah sukses dan banyak digemari oleh pecinta musik Indonesia. Hits Single seperti
+            Cantik, Engga Ngerti, Permaisuriku, Cerita Cinta, Setahun Kemarin, Tak Sebebas Merpati, Andai Dia Tahu
+            dan hits single Kahitna lainnya.</p>
+        <h3>Album Kelima</h3>
+        <p>Album Kahitna V – Cinta Sudah Lewat yang dirilis tahun 2003 ini mendatangkan vokalis baru "Mario
+            Ginanjar" jebolan Asia Bagus 1998 melengkapi formasi penyanyi trio dalam tubuh kahitna. Bukan hanya itu
+            saja yang istimewa dari album ini, yakni konsistensi kahitna dalam menggarap musik yang easy listening
+            dengan pilihan kata yang tak pasaran dalam ruang tema yang romantis. Tiga lagu yang menjadi hits
+            singlenya yaitu "Cinta Sudah Lewat", "Menikahiku" dan "Tak Mampu Mendua". </p>
+        <h3>Album Keenam</h3>
+        <p>Album Kahitna – Soulmate yang dirilis tahun 2006 ini mempunyai nuansa yang lebih simpel, minimalis namun
+            tetap elegant, kahitna tetap konsisten dengan ciri khasnya. Hits single di album ini adalah "Aku Dirimu
+            Dirinya", "Cinta Sendiri", "Soulmate" dan "Katakan Saja" ciptaan Yovie Widianto yang di aransemen ulang
+            oleh Kahitna.</p>
+        <h3>Album Ketujuh</h3>
+        <p>Menutup penghujung 2009 dan jeda tiga tahun dari album terakhirnya, KAHITNA me-launching album ke - 7 :
+            Lebih Dari Sekedar Cantik. Masih dengan aransemen musik yang cantik dan lirik yang romantis, kekuatan
+            album ini terletak pada lagu-lagu bagus yang terkemas dalam satu album. Sebut saja, di lagu "Untukku"
+            yang pernah dipopulerkan oleh Alm. Chrishye oleh KAHITNA diaransemen dan dinyanyikan ulang dengan indah
+            dan berbeda oleh Mario, Hedi dan Carlo.
+
+            Di lagu "Lebih dari Sekedar Cantik" dan "Everybody Needs Somebody", KAHITNA mampu menampilkan nuansa
+            yang fresh tanpa meninggalkan ciri khas KAHITNA yaitu choir yang bersahutan oleh tiga vokalisnya dalam
+            sebuah komposisi vokal yang harmonis. Tentu saja, masih ada lagu-lagu romantis yang menjadi ciri khas
+            KAHITNA seperti "Mantan Terindah" dan "Hampir jadi" yang didominasi permainan piano yang romantis oleh
+            Yovie. "Imsomnia", "Bila Bintang Tak Datang", "Mentariku" , "Pacarku" dan lagu lama Dea Mirella
+            "Menanti", juga melengkapi album terbaru KAHITNA ini.</p>
+
+    </article>
+    </section>
+
+    </div>
+    <footer>
+        <div class="social-media-buttons">
+            <a href="https://www.facebook.com/KAHITNA/?locale=id_ID"><img
+                    src="https://i0.wp.com/sguru.org/wp-content/uploads/2018/02/icon-facebook-black.png?ssl=1"></a>
+            <a href="https://www.instagram.com/kahitna/feed/?hl=id"><img
+                    src="https://i0.wp.com/sguru.org/wp-content/uploads/2018/01/instagram-logo-sketch.png"></a>
+            <a href="https://www.youtube.com/channel/UCWfodJjg2bxksGY8rI9VdSw"><img
+                    src="https://i0.wp.com/sguru.org/wp-content/uploads/2018/02/videos-2277016_960_720.png?ssl=1"></a>
+        </div>
+    </footer>
+    </header>
+
+</body>
+
+</html>

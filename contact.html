@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <script src='java.js'></script>
+    <title>Novia Safitri</title>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        background-image: url(img/kahitna.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+
+    .blurred-background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        backdrop-filter: blur(5px);
+    }
+
+    @media (max-width: 900px) {
+        body {
+            background-image: url(img/poster\ kahitna.png);
+            backdrop-filter: blur(5px);
+        }
+    }
+
+
+
+    h2 {
+        text-align: center;
+        color: rgb(255, 255, 255);
+        padding-top: 10%;
+    }
+
+    .topnav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        background-color: rgba(255, 255, 255, 0.285);
+        background-size: 80px;
+        width: 80%;
+        /* Atur lebar topnav sesuai kebutuhan */
+        margin: 0 auto;
+    }
+
+    .topnav a {
+        float: left;
+        color: #000000;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+    }
+
+    .topnav a:hover {
+        background-color: #ddd;
+        color: black;
+    }
+
+    .topnav a.active {
+        background-color: #be231e;
+        color: white;
+    }
+
+
+    body {
+        background-color: #ffffff;
+        font-family: Arial;
+    }
+
+    header {
+        background-color: rgba(0, 0, 0, 0);
+        color: white;
+        padding: 0;
+    }
+
+    @media (max-width: 900px) {
+        body {
+            background-image: url(img/poster\ kahitna.png);
+
+        }
+    }
+
+
+
+    h1 {
+        text-align: center;
+        color: rgb(205, 27, 27);
+        padding-top: 10%;
+    }
+
+    .topnav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        background-color: rgba(255, 255, 255, 0.285);
+        background-size: 80px;
+        width: 80%;
+        /* Atur lebar topnav sesuai kebutuhan */
+        margin: 0 auto;
+    }
+
+    .topnav a {
+        float: left;
+        color: #000000;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+    }
+
+    .topnav a:hover {
+        background-color: #ddd;
+        color: black;
+    }
+
+    .topnav a.active {
+        background-color: #be231e;
+        color: white;
+
+    }
+
+    /* Style inputs */
+    input[type="text"],
+    select,
+    textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        resize: vertical;
+    }
+
+    input[type="submit"] {
+        background-color: #de1e1e;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #e61717;
+    }
+
+    /* Style the container/contact section */
+    .container {
+        border-radius: 5px;
+        background-color: #f2f2f2a9;
+        padding: 10px;
+    }
+
+    /* Create two columns that float next to eachother */
+    .column {
+        float: left;
+        width: 50%;
+        margin-top: 6px;
+        padding: 20px;
+    }
+
+    /* Clear floats after the columns */
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    h1 {
+        text-align: center;
+        color: rgb(172, 25, 25);
+        padding-top: 50px;
+    }
+
+    label {
+        float: left;
+    }
+
+    /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 900px) {
+
+        .column,
+        input[type="submit"] {
+            width: 100%;
+            margin-top: 0;
+        }
+    }
+
+    footer {
+        background-color: rgba(161, 158, 158, 0.516);
+        padding: 10px;
+        text-align: center;
+        position: fixed;
+        /* Menentukan posisi absolut */
+        bottom: 0;
+        /* Menempatkan footer di bagian bawah halaman */
+        width: 100%;
+    }
+
+    /*botton sosmed*/
+    .social-media-buttons img {
+        max-width: 30px;
+        max-height: 30px;
+    }
+</style>
+</head>
+
+<body>
+
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <div class="dropdown">
+            <button class="dropbtn">About
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="biography.html">Biographies</a>
+                <a href="Picture.html">Picture</a>
+            </div>
+        </div>
+        <a href="tour.html">Tour dates & locations</a>
+        <div class="logo">
+            <img src="img/logo.png" alt="logo" style="margin: 5px 0 0 0 ; width: 100px; height: 100x;">
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Discography
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="Lyrics.html">Lyrics</a>
+                <a href="SampleTrack.html">Sample Tracks</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="Contact.html">Contact</a>
+            <a href="store.html">Store</a>
+        </div>
+    </div>
+
+
+    <header>
+        <h1>CONTACT US</h1>
+    </header>
+
+    <div class="container">
+        <div class="row">
+            <div class="column">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d253840.478949799!2d106.829518!3d-6.2297465!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f3e945e34b9d%3A0x5371bf0fdad786a2!2sJakarta%2C%20Daerah%20Khusus%20Ibukota%20Jakarta!5e0!3m2!1sid!2sid!4v1689325832453!5m2!1sid!2sid"
+                    width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <style>
+                    @media screen and (max-width: 900px) {
+                        iframe {
+                            width: 100%;
+                            height: auto;
+                        }
+                    }
+                </style>
+            </div>
+            <section class="column">
+                <form action="/action_page.php">
+                    <label for="fname">First Name</label>
+                    <input type="text" id="fname" name="firstname" placeholder="Your name.." />
+                    <label for="lname">Last Name</label>
+                    <input type="text" id="lname" name="lastname" placeholder="Your last name.." />
+                    <label for="country">Country</label>
+                    <select id="country" name="country">
+                        <option value="australia">Australia</option>
+                        <option value="canada">Canada</option>
+                        <option value="usa">USA</option>
+                    </select>
+                    <label for="subject">Subject</label>
+                    <textarea id="subject" name="subject" placeholder="Write something.."
+                        style="height: 170px"></textarea>
+                    <input type="submit" value="Submit" />
+                </form>
+        </div>
+    </div>
+    </div>
+    </section>
+    <div class="blurred-background"></div>
+    <footer>
+        <div class="social-media-buttons">
+            <a href="https://www.facebook.com/KAHITNA/?locale=id_ID"><img
+                    src="https://i0.wp.com/sguru.org/wp-content/uploads/2018/02/icon-facebook-black.png?ssl=1"></a>
+            <a href="https://www.instagram.com/kahitna/feed/?hl=id"><img
+                    src="https://i0.wp.com/sguru.org/wp-content/uploads/2018/01/instagram-logo-sketch.png"></a>
+            <a href="https://www.youtube.com/channel/UCWfodJjg2bxksGY8rI9VdSw"><img
+                    src="https://i0.wp.com/sguru.org/wp-content/uploads/2018/02/videos-2277016_960_720.png?ssl=1"></a>
+        </div>
+    </footer>
+</body>
+
+</html>

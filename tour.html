@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src='java.js'></script>
+    <title>Novia Safitri</title>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        background-image: url(img/kahitna.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+
+    }
+
+    .blurred-background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        backdrop-filter: blur(5px);
+    }
+
+    @media (max-width: 900px) {
+        body {
+            background-image: url(img/poster\ kahitna.png);
+        }
+    }
+
+
+
+    h2 {
+        text-align: center;
+        color: rgb(225, 30, 30);
+        padding-top: 10%;
+    }
+
+    /* Navbar container */
+    .navbar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        background-color: rgba(0, 0, 0, 0.4);
+        font-family: Arial;
+    }
+
+    .narbar1 {
+        overflow: hidden;
+        background-color: white;
+
+    }
+
+    /* Links inside the navbar */
+    .logo {
+        padding-right: 0px;
+        float: right;
+        padding-top: 0px;
+
+    }
+
+    .navbar a {
+        float: left;
+        font-size: 16px;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+
+    /* The dropdown container */
+    .dropdown {
+        float: left;
+        overflow: hidden;
+    }
+
+    /* Dropdown button */
+    .dropdown .dropbtn {
+        font-size: 16px;
+        border: none;
+        outline: none;
+        color: white;
+        padding: 14px 16px;
+        background-color: inherit;
+        font-family: inherit;
+        /* Important for vertical align on mobile phones */
+        margin: 0;
+        /* Important for vertical align on mobile phones */
+    }
+
+    @media (max-width: 900px) {
+        .navbar a {
+            font-size: 12px;
+        }
+
+        .dropdown .dropbtn {
+            font-size: 12px;
+        }
+    }
+
+    /* Add a red background color to navbar links on hover */
+    .navbar a:hover,
+    .dropdown:hover .dropbtn {
+        background-color: red;
+    }
+
+    /* Dropdown content (hidden by default) */
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+
+    /* Links inside the dropdown */
+    .dropdown-content a {
+        float: none;
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+    }
+
+    /* Add a grey background color to dropdown links on hover */
+    .dropdown-content a:hover {
+        background-color: #ddd;
+    }
+
+    /* Show the dropdown menu on hover */
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    /* Create two columns/boxes that floats next to each other */
+    nav {
+        float: left;
+        width: 30%;
+        height: 300px;
+        /* only for demonstration, should be removed */
+        background: #ccc;
+        padding: 20px;
+    }
+
+    /* Style the list inside the menu */
+    nav ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    header {
+        background-color: rgba(255, 255, 255, 0);
+        color: white;
+        padding: 5;
+    }
+
+    h2 {
+        text-align: center;
+        font-size: 50px;
+        color: rgb(225, 30, 30);
+        padding-top: 30px;
+        /* Sesuaikan dengan kebutuhan Anda */
+    }
+
+    footer {
+        background-color: rgba(172, 167, 167, 0.516);
+        padding: 10px;
+        text-align: center;
+        position: fixed;
+        /* Menentukan posisi absolut */
+        bottom: 0;
+        /* Menempatkan footer di bagian bawah halaman */
+        width: 100%;
+    }
+
+    /*botton sosmed*/
+    .social-media-buttons img {
+        max-width: 30px;
+        max-height: 30px;
+    }
+
+
+    .ticket-bg {
+        background-color: #000000;
+        opacity: 0.7;
+        width: 100%;
+        height: 50%;
+        position: fixed;
+        top: 40%;
+        z-index: 1;
+    }
+
+    .content-1 .date {
+        position: absolute;
+        top: 40px;
+        left: 20%;
+        color: white;
+        font-size: 20px;
+        font-family: Inter;
+        font-weight: 600;
+        word-wrap: break-word;
+    }
+
+    .content-1 .year {
+        position: absolute;
+        left: 28%;
+        top: 70px;
+        color: #e90b18;
+        font-size: 16px;
+        font-family: Inter;
+        font-weight: 400;
+        word-wrap: break-word;
+    }
+
+    .content-1 .place {
+        left: 42%;
+        top: 55px;
+        position: absolute;
+        color: white;
+        font-size: 16px;
+        font-family: Inter;
+        font-weight: 500;
+        word-wrap: break-word;
+    }
+
+    .content-1 .country {
+        left: 58%;
+        top: 55px;
+        position: absolute;
+        color: white;
+        font-size: 16px;
+        font-family: Inter;
+        font-weight: 500;
+        word-wrap: break-word;
+    }
+
+    .content-1 .ticket-1 {
+        left: 75%;
+        top: 50px;
+        width: 100px;
+        height: 30px;
+        color: white;
+        position: absolute;
+        background-color: #e90b18;
+        border: none;
+    }
+
+    .content-1 .break-1 {
+        width: 805px;
+        height: 5px;
+        left: 20%;
+        top: 105px;
+        position: absolute;
+        border: 1px solid #e90b18;
+        background-color: #e90b18;
+    }
+
+    /* Tambahkan media query untuk lebar layar tertentu */
+    @media (max-width: 900px) {
+        .content-1 {
+            position: relative;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .content-1 .date,
+        .content-1 .year,
+        .content-1 .place,
+        .content-1 .country,
+        .content-1 .ticket-1,
+        .content-1 .break-1 {
+            position: static;
+            text-align: center;
+        }
+
+        .ticket-bg {
+            top: 50%;
+            /* Sesuaikan posisi top jika diperlukan */
+        }
+    }
+
+
+    /* Ticket 2 */
+
+    .content-2 .date {
+        position: absolute;
+        top: 130px;
+        left: 22%;
+        color: white;
+        font-size: 20px;
+        font-family: Inter;
+        font-weight: 600;
+        word-wrap: break-word;
+    }
+
+    .content-2 .year {
+        position: absolute;
+        left: 28%;
+        top: 160px;
+        color: #e90b18;
+        font-size: 16px;
+        font-family: Inter;
+        font-weight: 400;
+        word-wrap: break-word;
+    }
+
+    .content-2 .place {
+        left: 42%;
+        top: 145px;
+        position: absolute;
+        color: white;
+        font-size: 16px;
+        font-family: Inter;
+        font-weight: 500;
+        word-wrap: break-word;
+    }
+
+    .content-2 .country {
+        left: 58%;
+        top: 145px;
+        position: absolute;
+        color: white;
+        font-size: 16px;
+        font-family: Inter;
+        font-weight: 500;
+        word-wrap: break-word;
+    }
+
+    .content-2 .ticket-2 {
+        left: 75%;
+        top: 140px;
+        width: 100px;
+        height: 30px;
+        color: white;
+        position: absolute;
+        background-color: #e90b18;
+        border: none;
+    }
+
+    .content-2 .break-2 {
+        width: 800px;
+        height: 5px;
+        left: 20%;
+        top: 195px;
+        position: absolute;
+        border: 1px solid #e90b18;
+        background-color: #e90b18;
+    }
+
+    /* Tambahkan media query untuk lebar layar tertentu */
+    @media (max-width: 900px) {
+        .content-2 {
+            position: relative;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .content-2 .date,
+        .content-2 .year,
+        .content-2 .place,
+        .content-2 .country,
+        .content-2 .ticket-2,
+        .content-2 .break-2 {
+            position: static;
+            text-align: center;
+        }
+
+        .ticket-bg {
+            top: 50%;
+            /* Sesuaikan posisi top jika diperlukan */
+        }
+    }
+
+    /* Ticket 3 */
+
+    .content-3 .date {
+        position: absolute;
+        top: 220px;
+        left: 22%;
+        color: white;
+        font-size: 20px;
+        font-family: Inter;
+        font-weight: 600;
+        word-wrap: break-word;
+    }
+
+    .content-3 .year {
+        position: absolute;
+        left: 28%;
+        top: 250px;
+        color: #e90b18;
+        font-size: 16px;
+        font-family: Inter;
+        font-weight: 400;
+        word-wrap: break-word;
+    }
+
+    .content-3 .place {
+        left: 42%;
+        top: 235px;
+        position: absolute;
+        color: white;
+        font-size: 16px;
+        font-family: Inter;
+        font-weight: 500;
+        word-wrap: break-word;
+    }
+
+    .content-3 .country {
+        left: 58%;
+        top: 235px;
+        position: absolute;
+        color: white;
+        font-size: 16px;
+        font-family: Inter;
+        font-weight: 500;
+        word-wrap: break-word;
+    }
+
+    .content-3 .ticket-3 {
+        left: 75%;
+        top: 230px;
+        width: 100px;
+        height: 30px;
+        color: white;
+        position: absolute;
+        background-color: #e90b18;
+        border: none;
+    }
+
+    .content-3 .break-3 {
+        width: 800px;
+        height: 5px;
+        left: 20%;
+        top: 280px;
+        position: absolute;
+        border: 1px solid #e90b18;
+        background-color: #e90b18;
+    }
+
+    /* Tambahkan media query untuk lebar layar tertentu */
+    @media (max-width: 900px) {
+        .content-3 {
+            position: relative;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .content-3 .date,
+        .content-3 .year,
+        .content-3 .place,
+        .content-3 .country,
+        .content-3 .ticket-3,
+        .content-3 .break-3 {
+            position: static;
+            text-align: center;
+        }
+
+        .ticket-bg {
+            top: 50%;
+            /* Sesuaikan posisi top jika diperlukan */
+        }
+    }
+
+    /* Ticket 4 */
+
+    .content-4 .date {
+        position: absolute;
+        top: 310px;
+        left: 20%;
+        color: white;
+        font-size: 20px;
+        font-family: Inter;
+        font-weight: 600;
+        word-wrap: break-word;
+    }
+
+    .content-4 .year {
+        position: absolute;
+        left: 28%;
+        top: 340px;
+        color: #e90b18;
+        font-size: 16px;
+        font-family: Inter;
+        font-weight: 400;
+        word-wrap: break-word;
+    }
+
+    .content-4 .place {
+        left: 42%;
+        top: 325px;
+        position: absolute;
+        color: white;
+        font-size: 16px;
+        font-family: Inter;
+        font-weight: 500;
+        word-wrap: break-word;
+    }
+
+    .content-4 .country {
+        left: 58%;
+        top: 325px;
+        position: absolute;
+        color: white;
+        font-size: 16px;
+        font-family: Inter;
+        font-weight: 500;
+        word-wrap: break-word;
+    }
+
+    .content-4 .ticket-4 {
+        left: 75%;
+        top: 320px;
+        width: 100px;
+        height: 30px;
+        color: white;
+        position: absolute;
+        background-color: #e90b18;
+        border: none;
+    }
+
+    .content-4 .break-4 {
+        width: 800px;
+        height: 5px;
+        left: 20%;
+        top: 370px;
+        position: absolute;
+        border: 1px solid #e90b18;
+        background-color: #e90b18;
+    }
+
+    /* Tambahkan media query untuk lebar layar tertentu */
+    @media (max-width: 900px) {
+        .content-4 {
+            position: relative;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .content-4 .date,
+        .content-4 .year,
+        .content-4 .place,
+        .content-4 .country,
+        .content-4 .ticket-4,
+        .content-4 .break-4 {
+            position: static;
+            text-align: center;
+        }
+
+        .ticket-bg {
+            top: 50%;
+            /* Sesuaikan posisi top jika diperlukan */
+        }
+    }
+</style>
+</head>
+
+<body>
+    <div class="blurred-background"></div>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <div class="dropdown">
+            <button class="dropbtn">About
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="biography.html">Biographies</a>
+                <a href="Picture.html">Picture</a>
+            </div>
+        </div>
+        <a href="tour.html">Tour dates & locations</a>
+        <div class="logo">
+            <img src="img/logo.png" alt="logo" style="margin: 5px 0 0 0 ; width: 100px; height: 100x;">
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Discography
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="Lyrics.html">Lyrics</a>
+                <a href="SampleTrack.html">Sample Tracks</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="Contact.html">Contact</a>
+            <a href="store.html">Store</a>
+        </div>
+    </div>
+
+
+    <header>
+        <br>
+        <br>
+        <br>
+        <br>
+        <h2>Tour Date And Locations</h2>
+    </header>
+
+    <div class="ticket-bg">
+        <div class="content-1">
+            <div class="date">WEDNESDAY, MAY 31ST</div>
+            <div class="year">2023</div>
+            <div class="place">INDONESIA BERDANSA</div>
+            <div class="country">JAKARTA SELATAN</div>
+            <button class="ticket-1">Ticket</button>
+            <div class="break-1"></div>
+        </div>
+        <div class="content-2">
+            <div class="date">FRIDAY, JUNE 2ND</div>
+            <div class="year">2023</div>
+            <div class="place">GRAB IT FAST 2023</div>
+            <div class="country">PONDOK INDAH MALL</div>
+            <button class="ticket-2">Ticket</button>
+            <div class="break-2"></div>
+        </div>
+
+        <div class="content-3">
+            <div class="date">MONDAY, JUNE 5TH</div>
+            <div class="year">2023</div>
+            <div class="place">ARTFEST </div>
+            <div class="country">MALANG</div>
+            <button class="ticket-3">Ticket</button>
+            <div class="break-3"></div>
+        </div>
+
+        <div class="content-4">
+            <div class="date">WEDNESDAY, JUNE 22ND</div>
+            <div class="year">2023</div>
+            <div class="place">PENSI SMA PRADITA </div>
+            <div class="country">BANDUNG</div>
+            <button class="ticket-4">Ticket</button>
+            <div class="break-4"></div>
+        </div>
+    </div>
+    </div>
+    <footer>
+        <div class="social-media-buttons">
+            <a href="https://www.facebook.com/KAHITNA/?locale=id_ID"><img
+                    src="https://i0.wp.com/sguru.org/wp-content/uploads/2018/02/icon-facebook-black.png?ssl=1"></a>
+            <a href="https://www.instagram.com/kahitna/feed/?hl=id"><img
+                    src="https://i0.wp.com/sguru.org/wp-content/uploads/2018/01/instagram-logo-sketch.png"></a>
+            <a href="https://www.youtube.com/channel/UCWfodJjg2bxksGY8rI9VdSw"><img
+                    src="https://i0.wp.com/sguru.org/wp-content/uploads/2018/02/videos-2277016_960_720.png?ssl=1"></a>
+        </div>
+    </footer>
+</body>
+
+</html>
